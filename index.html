@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        
+        
+        
+        
+        
+<button onmousedown="oddDoWhile();">Odd Number with Do while loop</button>
+<button onmousedown="oddFor();">Odd number with for loop</button>
+<button onmousedown="amstrong();">Amstrong print</button>
+<button onmousedown="doWhileAmst();">Amstrong number check with Do while loop</button>
+<button onmousedown="forLoopAmst();">Amstrong number check with for loop</button>
+
+
+    <script>
+
+        // Even and Odd statement with Do while loop
+
+function oddDoWhile(){
+    var input ;
+    do{
+        input = parseInt(prompt("enter number"));
+    }while(input != input || input < 100 || input > 1000){
+        for(var i = 0; i <=input; i++){
+            if(i % 2 == 0){
+                document.write(`${i} is an even number`);
+            }else{
+                document.write(`${i} is an odd number`);
+            }
+        }
+    }
+
+}
+// 
+// Even and Odd statement with for loop
+
+function oddFor(){
+    var input;
+    var counter = 1
+
+    for(var i = 0; i < counter; i++){
+        input= parseInt(prompt("Enter number"));
+        if(input != input || input < 100 || input > 1000){
+            i--;
+            continue;
+        }else{
+            for(i = 0; i <= input; i++){
+                if(i % 2 == 0){
+                    document.write(`${i} is an even number<br>`)
+                }else{
+                    document.write(`${i} is an odd number <br>`);
+                }
+            }
+        }
+
+    }
+}
+
+
+// amstrong numbers loop
+
+function amstrong(){
+    for (var i = 100; i < 1000; i++)
+{
+    var h, t, u;
+    h= parseInt(i / 100);
+    t = parseInt((i % 100)/10);
+    u = parseInt((i%100)% 10);
+    if(h**3 + t**3 + u**3 == i){
+        document.write(`${i} is an amstrong number <br>`);
+    }
+}
+    
+}
+    </script>
+<script>
+
+// Using Do While loop for Amstrong
+
+function doWhileAmst(){
+    var input;
+
+do{input = parseInt(prompt('Enter any value;'))
+}
+while(input != input || input < 100 || input >= 1000);
+var h, t, u;
+h = parseInt(input/100);
+t = parseInt((input%100)/10);
+u = parseInt((input%100)%10);
+
+if (h**3 + t**3 + u**3 == input){
+    document.write(`${input} is an amstrong number <br>`); 
+}else{
+    document.write(`${input} is not an amstrong number <br>`);
+}
+}
+
+// Using For loop for Amstrong
+function forLoopAmst(){
+    var input;
+var counter = 1
+
+for(var i = 0; i < counter; i++){
+    input= parseInt(prompt("Enter number"));
+    if(input != input || input < 100 || input > 1000){
+        i--;
+        continue;
+    }else{
+        var h, t, u;
+h = parseInt(input/100);
+t = parseInt((input % 100)/10);
+u = parseInt((input % 100)%10);
+
+if (h**3 + t**3 + u**3 == input){
+    document.write(`${input} is an amstrong number <br>`); 
+}else{
+    document.write(`${input} is not an amstrong number <br>`);
+}
+    }
+    }
+}
+
+
+
+</script>
+</body>
+</html>
